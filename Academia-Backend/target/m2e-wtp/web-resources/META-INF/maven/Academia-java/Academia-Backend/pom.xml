@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <project
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
@@ -21,7 +22,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<!-- Spring -->
-		<spring-framework.version>4.0.3.RELEASE</spring-framework.version>
+		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
 
 		<!-- Hibernate / JPA -->
 		<!-- <hibernate.version>4.3.5.Final</hibernate.version> -->
@@ -45,7 +46,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			<scope>test</scope>
+			
 		</dependency>
 
 		<!-- Spring and Transactions -->
@@ -81,7 +82,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring-framework.version}</version>
-			<scope>test</scope>
+			
 		</dependency>
 
 		<!-- Spring ORM support -->
@@ -135,6 +136,9 @@
 			<version>1.4</version>
 		</dependency>
 	</dependencies>
+	
+	
+	
 
 	<build>
 		<finalName>Academia-Backend</finalName>

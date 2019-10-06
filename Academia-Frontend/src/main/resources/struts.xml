@@ -24,6 +24,13 @@
              1) class is set to 'editEmployeeAction' which is bean defined by Spring context
              2) We have given the method to be called here as well;
         -->
+        
+            <action name="addSocio" class="package ar.com.softtek.academia.web.action.SocioAction" >
+            
+            <result name="SUCCESS">/agregarsocio.jsp</result>
+        </action>
     </package>
+    
+
      
 </struts>

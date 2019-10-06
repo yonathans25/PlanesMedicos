@@ -12,5 +12,12 @@
 
 	<!-- BeanDefinitions propios de la aplicacion -->
 	<import resource="classpath:spring/backend/academia-*-spring.xml" />
-
+	
+<bean id="socioDAO" class="ar.com.softtek.academia.backend.dao.impl.SocioDAOimpl">
+        <property name="sessionFactory" ref="spring.hibernate.session.factory"/>
+    </bean>
+    
+    <bean id="socioManager" class="ar.com.softtek.academia.backend.bo.impl.SocioBOimpl">
+        <property name="socioDAO" ref="socioDAO"/>
+    </bean>
 </beans>

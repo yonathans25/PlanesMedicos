@@ -1,20 +1,43 @@
 package ar.com.academia.entities;
 
-import java.util.List;
+import java.util.Collection;
+
 
 public class Socio {
 
-	private int id;
-	private int numeroSocio;
-	private String nombreYapellido;
-	private String sexo;
-	private String estadoCivil;
-	private String nombreConyuge;
-	private int cantidadHijos;
-	private String dni;
-	private String telefono;
-	private String direccion;
-	private List<Turno> turnos;	
+	private int numeroSocio, 
+	            cantidadHijos;
+	private Plan plan;
+	private String nombreApellido, 
+	               sexo, 
+	               estadoCivil, 
+	               nombreConyuge, 
+	               dni, 
+	               telefono, 
+	               direccion;
+	private Collection<Turno> turno;
+
+	public Socio() {
+
+	}
+
+	public Socio(int numeroSocio, int cantidadHijos, Plan plan, String nombreApellido, String sexo, String estadoCivil,
+			String nombreConyuge, String dni, String telefono, String direccion, Collection<Turno> turno) {
+
+		this.numeroSocio = numeroSocio;
+		this.cantidadHijos = cantidadHijos;
+		this.plan = plan;
+		this.nombreApellido = nombreApellido;
+		this.sexo = sexo;
+		this.estadoCivil = estadoCivil;
+		this.nombreConyuge = nombreConyuge;
+		this.dni = dni;
+		this.telefono = telefono;
+		this.direccion = direccion;
+		this.turno = turno;
+	}
+	
+	
 
 	public int getNumeroSocio() {
 		return numeroSocio;
@@ -24,12 +47,28 @@ public class Socio {
 		this.numeroSocio = numeroSocio;
 	}
 
-	public String getNombreYapellido() {
-		return nombreYapellido;
+	public int getCantidadHijos() {
+		return cantidadHijos;
 	}
 
-	public void setNombreYapellido(String nombreYapellido) {
-		this.nombreYapellido = nombreYapellido;
+	public void setCantidadHijos(int cantidadHijos) {
+		this.cantidadHijos = cantidadHijos;
+	}
+
+	public Plan getPlan() {
+		return plan;
+	}
+
+	public void setPlan(Plan plan) {
+		this.plan = plan;
+	}
+
+	public String getNombreApellido() {
+		return nombreApellido;
+	}
+
+	public void setNombreApellido(String nombreApellido) {
+		this.nombreApellido = nombreApellido;
 	}
 
 	public String getSexo() {
@@ -56,14 +95,6 @@ public class Socio {
 		this.nombreConyuge = nombreConyuge;
 	}
 
-	public int getCantidadHijos() {
-		return cantidadHijos;
-	}
-
-	public void setCantidadHijos(int cantidadHijos) {
-		this.cantidadHijos = cantidadHijos;
-	}
-
 	public String getDni() {
 		return dni;
 	}
@@ -88,19 +119,12 @@ public class Socio {
 		this.direccion = direccion;
 	}
 
-	public List<Turno> getTurnos() {
-		return turnos;
+	public Collection<Turno> getTurno() {
+		return turno;
 	}
 
-	public void setTurnos(List<Turno> turnos) {
-		this.turnos = turnos;
+	public void setTurno(Collection<Turno> turno) {
+		this.turno = turno;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 }
