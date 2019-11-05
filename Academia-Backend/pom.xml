@@ -36,6 +36,7 @@
 			<version>${pom.version}</version>
 		</dependency>
 
+
 		<dependency>
 			<groupId>Academia-java</groupId>
 			<artifactId>Academia-Services</artifactId>
@@ -46,7 +47,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
-			
+
 		</dependency>
 
 		<!-- Spring and Transactions -->
@@ -82,7 +83,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${spring-framework.version}</version>
-			
+
 		</dependency>
 
 		<!-- Spring ORM support -->
@@ -136,9 +137,9 @@
 			<version>1.4</version>
 		</dependency>
 	</dependencies>
-	
-	
-	
+
+
+
 
 	<build>
 		<finalName>Academia-Backend</finalName>

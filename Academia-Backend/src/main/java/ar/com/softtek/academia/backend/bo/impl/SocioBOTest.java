@@ -24,7 +24,7 @@ import ar.com.softtek.academia.backend.dao.impl.MockSocioDAO;
 public class SocioBOTest {
 
 	@Autowired
-	private SocioBOimpl socioBO;
+	private SocioBOImpl socioBO;
 	@Autowired
 	private MockSocioDAO socioDAO;
 
@@ -41,7 +41,7 @@ public class SocioBOTest {
 		assertEquals(1, result.getNumeroSocio());
 		assertEquals("socio1", result.getNombreApellido());
 
-		result.setNombreApellido("nuevoNombre");
+//		result.setNombreApellido("nuevoNombre");
 		socioBO.update(result);
 
 		result = socioBO.getById(1);
@@ -95,11 +95,11 @@ public class SocioBOTest {
 		assertEquals(10, result.size());
 	}
 
-	public SocioBOimpl getSocioBO() {
+	public SocioBOImpl getSocioBO() {
 		return socioBO;
 	}
 
-	public void setSocioBO(SocioBOimpl socioBO) {
+	public void setSocioBO(SocioBOImpl socioBO) {
 		this.socioBO = socioBO;
 	}
 }

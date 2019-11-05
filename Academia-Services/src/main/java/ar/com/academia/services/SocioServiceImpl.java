@@ -7,20 +7,21 @@ import javax.jws.WebService;
 import ar.com.academia.entities.Socio;
 import ar.com.academia.entities.excepciones.BusinessException;
 import ar.com.academia.entities.excepciones.ServiceException;
-import ar.com.softtek.academia.backend.bo.impl.SocioBOimpl;
+import ar.com.softtek.academia.backend.bo.impl.SocioBOImpl;
+
 
 @WebService(endpointInterface = "package ar.com.academia.services.SocioService", serviceName = "SocioService")
 public class SocioServiceImpl implements SocioService {
 
-	private SocioBOimpl socioBO;
+	private SocioBOImpl socioBO;
 	private List<Socio> listSocio;
 	private Socio socio;
 
-	public SocioBOimpl getSocioBO() {
+	public SocioBOImpl getSocioBO() {
 		return socioBO;
 	}
 
-	public void setSocioBO(SocioBOimpl socioBO) {
+	public void setSocioBO(SocioBOImpl socioBO) {
 		this.socioBO = socioBO;
 	}
 
