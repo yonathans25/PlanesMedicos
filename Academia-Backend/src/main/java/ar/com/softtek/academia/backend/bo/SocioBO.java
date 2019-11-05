@@ -6,7 +6,7 @@ import ar.com.academia.entities.Socio;
 import ar.com.academia.entities.excepciones.BusinessException;
 
 
-
+//agregando un comentarioS
 public interface SocioBO {
 
 	List<Socio> getAll() throws BusinessException;
