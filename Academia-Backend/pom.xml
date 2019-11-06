@@ -37,11 +37,7 @@
 		</dependency>
 
 
-		<dependency>
-			<groupId>Academia-java</groupId>
-			<artifactId>Academia-Services</artifactId>
-			<version>${pom.version}</version>
-		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>

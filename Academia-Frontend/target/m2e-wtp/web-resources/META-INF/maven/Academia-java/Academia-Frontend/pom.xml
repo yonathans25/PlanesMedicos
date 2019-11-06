@@ -10,9 +10,9 @@
 		<version>1.0.0</version>
 	</parent>
 
-	<groupId>Academia-java</groupId>
+	
 	<artifactId>Academia-Frontend</artifactId>
-	<version>1.0.0</version>
+	
 	<packaging>war</packaging>
 	<name>Academia-Frontend</name>
 	<url>http://maven.apache.org</url>
