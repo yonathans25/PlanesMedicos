@@ -9,7 +9,6 @@ import ar.com.academia.entities.excepciones.BusinessException;
 import ar.com.academia.entities.excepciones.ServiceException;
 import ar.com.softtek.academia.backend.bo.impl.SocioBOImpl;
 
-
 @WebService(endpointInterface = "package ar.com.academia.services.SocioService", serviceName = "SocioService")
 public class SocioServiceImpl implements SocioService {
 
