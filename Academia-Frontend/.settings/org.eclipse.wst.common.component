@@ -10,6 +10,9 @@
         <dependent-module archiveName="Academia-Services-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Academia-Services/Academia-Services">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="Academia-Backend-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/Academia-Backend/Academia-Backend">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="Academia-Frontend"/>
         <property name="java-output-path" value="/Academia-Frontend/target/classes"/>
     </wb-module>
