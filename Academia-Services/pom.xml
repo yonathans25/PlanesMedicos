@@ -28,7 +28,7 @@
 				<dependency>
 			<groupId>Academia-java</groupId>
 			<artifactId>Academia-Backend</artifactId>
-			<version>${pom.version}</version>
+<version>${pom.version}</version>
 		</dependency>
 
 		<dependency>
