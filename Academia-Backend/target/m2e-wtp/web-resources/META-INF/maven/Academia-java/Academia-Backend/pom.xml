@@ -25,8 +25,8 @@
 		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
 
 		<!-- Hibernate / JPA -->
-		<!-- <hibernate.version>4.3.5.Final</hibernate.version> -->
-		<hibernate.version>3.6.9.Final</hibernate.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+        <!--  <hibernate.version>3.6.9.Final</hibernate.version> -->
 	</properties>
 
 	<dependencies>
@@ -35,9 +35,6 @@
 			<artifactId>Academia-Entities</artifactId>
 			<version>${pom.version}</version>
 		</dependency>
-
-
-
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -99,7 +96,8 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-ehcache</artifactId>
-			<version>3.6.10.Final</version>
+			<version>4.3.5.Final</version>
+<!-- 			<version>3.6.10.Final</version> -->
 		</dependency>
 		<!-- Hibernate library dependecy start -->
 		<dependency>
@@ -121,7 +119,6 @@
 		</dependency>
 		<!-- Hibernate library dependecy end -->
 
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -133,9 +130,6 @@
 			<version>1.4</version>
 		</dependency>
 	</dependencies>
-
-
-
 
 	<build>
 		<finalName>Academia-Backend</finalName>

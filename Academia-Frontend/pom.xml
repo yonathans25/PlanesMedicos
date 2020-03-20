@@ -10,13 +10,10 @@
 		<version>1.0.0</version>
 	</parent>
 
-	
 	<artifactId>Academia-Frontend</artifactId>
-	
 	<packaging>war</packaging>
 	<name>Academia-Frontend</name>
 	<url>http://maven.apache.org</url>
-	
 	
 	<properties>
 		<!-- Generic properties -->
@@ -25,10 +22,9 @@
 		<!-- Spring -->
 		<spring-framework.version>4.0.3.RELEASE</spring-framework.version>
 		<!-- Struts-->
-		<struts.version>2.3.16.2</struts.version>
-</properties>
+		<struts.version>2.3.35</struts.version>
+	</properties>
 	
-
 	<dependencies>
 		<dependency>
 			<groupId>Academia-java</groupId>
@@ -45,7 +41,7 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 
