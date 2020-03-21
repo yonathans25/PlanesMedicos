@@ -34,12 +34,12 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		this.type = type;
 	}
 
-	public boolean delete(int id) throws PersistenceException {
+	public boolean deleteSocioById(int id) throws PersistenceException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public List<Socio> getAll() throws PersistenceException {
+	public List<Socio> getAllSocios() throws PersistenceException {
 
 		try {
 			List<Socio> result =  (List<Socio>) this.sessionFactory.getCurrentSession().createCriteria(getType());
@@ -52,7 +52,7 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 
 	}
 
-	public Socio getById(int id) throws PersistenceException {
+	public Socio getSocioById(int id) throws PersistenceException {
 		try {
 			Socio result = (Socio) this.sessionFactory.getCurrentSession().get(this.getType(), id);
 
@@ -63,7 +63,7 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 
 	}
 
-	public void save(Socio entidad) throws PersistenceException {
+	public void saveSocio(Socio entidad) throws PersistenceException {
 
 		try {
 			this.sessionFactory.getCurrentSession().save(entidad);
@@ -73,7 +73,7 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		}
 	}
 
-	public void update(Socio entidad) throws PersistenceException {
+	public void updateSocio(Socio entidad) throws PersistenceException {
 		try {
 			this.sessionFactory.getCurrentSession().update(entidad);
 		} catch (DataAccessException e) {
@@ -82,7 +82,7 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 
 	}
 
-	public boolean delete(Socio entidad) throws PersistenceException {
+	public boolean deleteSocio(Socio entidad) throws PersistenceException {
 		try {
 			this.sessionFactory.getCurrentSession().delete(entidad);
 			return true;
@@ -91,7 +91,7 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		}
 	}
 
-	public int count() throws PersistenceException {
+	public int countSocios() throws PersistenceException {
 		try {
 			Session sesion = this.sessionFactory.getCurrentSession();
 			Criteria criteria = sesion.createCriteria(this.getType());
