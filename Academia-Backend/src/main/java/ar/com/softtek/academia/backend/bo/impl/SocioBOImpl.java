@@ -47,7 +47,7 @@ public class SocioBOImpl implements SocioBO {
 
 	public Socio getSocioById(int id) throws BusinessException {
 		try {
-			socio= socioDAO1.getSocioById(id);
+			socio= socioDAO1.getSocioByIdDao(id);
 			return socio;
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
@@ -59,7 +59,7 @@ public class SocioBOImpl implements SocioBO {
 
 	public void saveSocio(Socio socio) throws BusinessException {
 		try {
-			socioDAO1.saveSocio(socio);
+			socioDAO1.saveSocioDao(socio);
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -71,7 +71,7 @@ public class SocioBOImpl implements SocioBO {
 	public void updateSocio(Socio socio) throws BusinessException {
 		// TODO Auto-generated method stub
 		try {
-			socioDAO1.updateSocio(socio);
+			socioDAO1.updateSocioDao(socio);
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,15 +1,11 @@
 package ar.com.softtek.academia.backend.dao.impl;
 
 import java.util.List;
-
-
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
-
-import org.hibernate.classic.Session;
+import org.hibernate.Session;
 import org.hibernate.criterion.Projections;
 import org.springframework.dao.DataAccessException;
-
 import ar.com.academia.entities.excepciones.PersistenceException;
 import ar.com.softtek.academia.backend.dao.GenericDAO;
 

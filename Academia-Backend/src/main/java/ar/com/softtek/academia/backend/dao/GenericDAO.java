@@ -1,7 +1,6 @@
 package ar.com.softtek.academia.backend.dao;
 
 import java.util.List;
-
 import ar.com.academia.entities.excepciones.PersistenceException;
 
 public interface GenericDAO<T> {
