@@ -6,16 +6,14 @@ import ar.com.academia.entities.Socio;
 import ar.com.academia.entities.excepciones.BusinessException;
 import ar.com.academia.entities.excepciones.PersistenceException;
 import ar.com.softtek.academia.backend.bo.SocioBO;
-
 import ar.com.softtek.academia.backend.dao.impl.MockSocioDAO;
 import ar.com.softtek.academia.backend.dao.impl.SocioDAOImpl;
 
 public class SocioBOImpl implements SocioBO {
 
-	private List<Socio> listSocio;
+	private List<Socio> listSocios;
 	private Socio socio;
 	private SocioDAOImpl socioDAO1;
-	
 	private MockSocioDAO socioDAO;
 
 	public MockSocioDAO getSocioDAO() {
@@ -34,10 +32,10 @@ public class SocioBOImpl implements SocioBO {
 		this.socio = socio;
 	}
 
-	public List<Socio> getAll() throws BusinessException {
+	public List<Socio> getAllSocios() throws BusinessException {
 		try {
-			listSocio = socioDAO1.getAll();
-			return listSocio;
+			listSocios = socioDAO1.getAll();
+			return listSocios;
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -46,9 +44,9 @@ public class SocioBOImpl implements SocioBO {
 		
 	}
 
-	public Socio getById(int id) throws BusinessException {
+	public Socio getSocioById(int id) throws BusinessException {
 		try {
-			socio= socioDAO1.getById(id);
+			socio= socioDAO1.getSocioByIdDao(id);
 			return socio;
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
@@ -58,9 +56,9 @@ public class SocioBOImpl implements SocioBO {
 		
 	}
 
-	public void save(Socio socio) throws BusinessException {
+	public void saveSocio(Socio socio) throws BusinessException {
 		try {
-			socioDAO1.save(socio);
+			socioDAO1.saveSocioDao(socio);
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,10 +67,10 @@ public class SocioBOImpl implements SocioBO {
 
 	}
 
-	public void update(Socio socio) throws BusinessException {
+	public void updateSocio(Socio socio) throws BusinessException {
 		// TODO Auto-generated method stub
 		try {
-			socioDAO1.update(socio);
+			socioDAO1.updateSocioDao(socio);
 		} catch (PersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -81,7 +79,7 @@ public class SocioBOImpl implements SocioBO {
 
 	}
 
-	public boolean delete(Socio socio) throws BusinessException {
+	public boolean deleteSocio(Socio socio) throws BusinessException {
 		try {
 			socioDAO1.delete(socio);
 			return true;
@@ -94,12 +92,12 @@ public class SocioBOImpl implements SocioBO {
 		
 	}
 
-	public boolean delete(int id) throws BusinessException {
+	public boolean deleteSocioById(int id) throws BusinessException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public int count() throws BusinessException {
+	public int countSocios() throws BusinessException {
 		// TODO Auto-generated method stub
 		return 0;
 	}

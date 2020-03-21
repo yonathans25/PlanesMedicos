@@ -5,16 +5,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-
 import java.util.List;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import ar.com.academia.entities.Socio;
 import ar.com.academia.entities.excepciones.BusinessException;
 import ar.com.softtek.academia.backend.dao.impl.MockSocioDAO;
@@ -36,15 +33,15 @@ public class SocioBOTest {
 	@Test
 	public void actualizarSocioTest() throws BusinessException {
 		socioDAO.resetLista();
-		Socio result = socioBO.getById(1);
+		Socio result = socioBO.getSocioById(1);
 		assertNotNull(result);
 		assertEquals(1, result.getNumeroSocio());
 		assertEquals("socio1", result.getNombreApellido());
 
 //		result.setNombreApellido("nuevoNombre");
-		socioBO.update(result);
+		socioBO.updateSocio(result);
 
-		result = socioBO.getById(1);
+		result = socioBO.getSocioById(1);
 		assertNotNull(result);
 		assertEquals(1, result.getNumeroSocio());
 		assertEquals("nuevoNombre", result.getNombreApellido());
@@ -54,35 +51,35 @@ public class SocioBOTest {
 	public void borrarSocioTest() throws BusinessException {
 		socioDAO.resetLista();
 
-		Socio socio = socioBO.getById(3);
+		Socio socio = socioBO.getSocioById(3);
 		assertNotNull(socio);
 		assertEquals(3, socio.getNumeroSocio());
 		assertEquals("socio3", socio.getNombreApellido());
 
-		boolean result = socioBO.delete(3);
+		boolean result = socioBO.deleteSocioById(3);
 		assertTrue(result);
 
-		socio = socioBO.getById(3);
+		socio = socioBO.getSocioById(3);
 		assertNull(socio);
 	}
 
 	@Test
 	public void crearSocioTest() throws BusinessException {
 		socioDAO.resetLista();
-		List<Socio> result = socioBO.getAll();
+		List<Socio> result = socioBO.getAllSocios();
 		assertEquals(10, result.size());
 
 		Socio socio = new Socio();
-		socioBO.save(socio);
+		socioBO.saveSocio(socio);
 
-		result = socioBO.getAll();
+		result = socioBO.getAllSocios();
 		assertEquals(11, result.size());
 	}
 
 	@Test
 	public void getSocioByIdTest() throws BusinessException {
 		socioDAO.resetLista();
-		Socio result = socioBO.getById(1);
+		Socio result = socioBO.getSocioById(1);
 		assertNotNull(result);
 		assertEquals(1, result.getNumeroSocio());
 		assertEquals("socio1", result.getNombreApellido());
@@ -91,7 +88,7 @@ public class SocioBOTest {
 	@Test
 	public void getAllSociosTest() throws BusinessException {
 		socioDAO.resetLista();
-		List<Socio> result = socioBO.getAll();
+		List<Socio> result = socioBO.getAllSocios();
 		assertEquals(10, result.size());
 	}
 

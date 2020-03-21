@@ -42,7 +42,7 @@ public class SocioServiceImpl implements SocioService {
 
 	public void add(Socio socio) throws ServiceException {
 		try {
-			socioBO.save(socio);
+			socioBO.saveSocio(socio);
 		} catch (BusinessException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -53,7 +53,7 @@ public class SocioServiceImpl implements SocioService {
 
 	public List<Socio> getAll() throws ServiceException {
 		try {
-			listSocio = socioBO.getAll();
+			listSocio = socioBO.getAllSocios();
 			return listSocio;
 		} catch (BusinessException e) {
 			// TODO Auto-generated catch block
@@ -65,7 +65,7 @@ public class SocioServiceImpl implements SocioService {
 
 	public Socio getById(int id) throws ServiceException {
 		try {
-			socio = socioBO.getById(id);
+			socio = socioBO.getSocioById(id);
 			return socio;
 
 		} catch (BusinessException e) {
@@ -83,7 +83,7 @@ public class SocioServiceImpl implements SocioService {
 
 	public Boolean RemoveById(int id) throws ServiceException {
 		try {
-			socioBO.delete(id);
+			socioBO.deleteSocioById(id);
 			return true;
 		} catch (BusinessException e) {
 			// TODO Auto-generated catch block

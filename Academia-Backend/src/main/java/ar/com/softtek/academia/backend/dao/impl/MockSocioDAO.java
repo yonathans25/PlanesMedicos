@@ -2,7 +2,6 @@ package ar.com.softtek.academia.backend.dao.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import ar.com.academia.entities.Socio;
 import ar.com.softtek.academia.backend.dao.GenericDAO;
 

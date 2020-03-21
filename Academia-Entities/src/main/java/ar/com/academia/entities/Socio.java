@@ -5,16 +5,16 @@ import java.util.Collection;
 
 public class Socio {
 
-	private int numeroSocio, 
-	            cantidadHijos;
+	private int numeroSocio;
+	private int cantidadHijos;
 	private Plan plan;
-	private String nombreApellido, 
-	               sexo, 
-	               estadoCivil, 
-	               nombreConyuge, 
-	               dni, 
-	               telefono, 
-	               direccion;
+	private String nombreApellido; 
+	private String sexo;
+	private String estadoCivil; 
+	private String nombreConyuge; 
+	private String dni;
+	private String telefono;
+	private String direccion;
 	private Collection<Turno> turno;
 
 	public Socio() {

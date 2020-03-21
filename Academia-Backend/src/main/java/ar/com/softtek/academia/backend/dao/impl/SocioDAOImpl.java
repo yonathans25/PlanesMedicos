@@ -4,18 +4,16 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.SessionFactory;
-import org.hibernate.classic.Session;
+import org.hibernate.Session;
 import org.hibernate.criterion.Projections;
 import org.springframework.dao.DataAccessException;
-
 import ar.com.academia.entities.Socio;
 import ar.com.academia.entities.excepciones.PersistenceException;
-
 import ar.com.softtek.academia.backend.dao.SocioDAO;
 
 public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 	private Class<Socio> type = null;
-	 private SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;
@@ -34,37 +32,30 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		this.type = type;
 	}
 
-	public boolean delete(int id) throws PersistenceException {
+	public boolean deleteSocioByIdDao(int id) throws PersistenceException {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	public List<Socio> getAll() throws PersistenceException {
-
+	public List<Socio> getAllSociosDao() throws PersistenceException {
 		try {
 			List<Socio> result =  (List<Socio>) this.sessionFactory.getCurrentSession().createCriteria(getType());
-
 			return result;
 		} catch (DataAccessException e) {
 			throw new PersistenceException();
-
 		}
-
 	}
 
-	public Socio getById(int id) throws PersistenceException {
+	public Socio getSocioByIdDao(int id) throws PersistenceException {
 		try {
 			Socio result = (Socio) this.sessionFactory.getCurrentSession().get(this.getType(), id);
-
 			return result;
 		} catch (DataAccessException e) {
 			throw new PersistenceException();
 		}
-
 	}
 
-	public void save(Socio entidad) throws PersistenceException {
-
+	public void saveSocioDao(Socio entidad) throws PersistenceException {
 		try {
 			this.sessionFactory.getCurrentSession().save(entidad);
 
@@ -73,16 +64,15 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		}
 	}
 
-	public void update(Socio entidad) throws PersistenceException {
+	public void updateSocioDao(Socio entidad) throws PersistenceException {
 		try {
 			this.sessionFactory.getCurrentSession().update(entidad);
 		} catch (DataAccessException e) {
 			throw new PersistenceException();
 		}
-
 	}
 
-	public boolean delete(Socio entidad) throws PersistenceException {
+	public boolean deleteSocioDao(Socio entidad) throws PersistenceException {
 		try {
 			this.sessionFactory.getCurrentSession().delete(entidad);
 			return true;
@@ -91,7 +81,7 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		}
 	}
 
-	public int count() throws PersistenceException {
+	public int countSociosDao() throws PersistenceException {
 		try {
 			Session sesion = this.sessionFactory.getCurrentSession();
 			Criteria criteria = sesion.createCriteria(this.getType());
@@ -101,6 +91,12 @@ public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 		} catch (DataAccessException e) {
 			throw new PersistenceException();
 		}
+	}
+
+	@Override
+	public boolean delete(int id) throws PersistenceException {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

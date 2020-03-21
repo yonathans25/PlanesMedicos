@@ -2,10 +2,10 @@ package ar.com.academia.entities;
 
 public class Turno {
 
-	public String id;
-	public String especialidad;
-	public String fecha;
-	public String prestacion;
+	private String id;
+	private String especialidad;
+	private String fecha;
+	private String prestacion;
 
 	public String getId() {
 		return id;
