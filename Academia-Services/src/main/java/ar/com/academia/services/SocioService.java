@@ -7,7 +7,6 @@ import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
-
 import ar.com.academia.entities.Socio;
 import ar.com.academia.entities.excepciones.ServiceException;
 

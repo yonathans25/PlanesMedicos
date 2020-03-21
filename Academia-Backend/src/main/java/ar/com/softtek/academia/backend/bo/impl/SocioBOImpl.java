@@ -14,7 +14,6 @@ public class SocioBOImpl implements SocioBO {
 	private List<Socio> listSocios;
 	private Socio socio;
 	private SocioDAOImpl socioDAO1;
-	
 	private MockSocioDAO socioDAO;
 
 	public MockSocioDAO getSocioDAO() {

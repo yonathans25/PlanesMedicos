@@ -13,7 +13,7 @@ import ar.com.softtek.academia.backend.dao.SocioDAO;
 
 public class SocioDAOImpl extends GenericDAOImpl<Socio> implements SocioDAO {
 	private Class<Socio> type = null;
-	 private SessionFactory sessionFactory;
+	private SessionFactory sessionFactory;
 
 	public SessionFactory getSessionFactory() {
 		return sessionFactory;

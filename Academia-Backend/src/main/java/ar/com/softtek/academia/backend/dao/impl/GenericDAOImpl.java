@@ -12,7 +12,6 @@ import ar.com.softtek.academia.backend.dao.GenericDAO;
 public abstract class GenericDAOImpl<T> implements GenericDAO<T> {
 
 	protected SessionFactory sessionFactory;
-
 	private Class<T> type = null;
 
 	public Class<T> getType() {
