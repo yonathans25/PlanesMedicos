@@ -22,7 +22,7 @@
 		<!-- Spring -->
 		<spring-framework.version>4.0.3.RELEASE</spring-framework.version>
 		<!-- Struts-->
-		<struts.version>2.3.35</struts.version>
+		<struts.version>2.5.30</struts.version>
 	</properties>
 	
 	<dependencies>
